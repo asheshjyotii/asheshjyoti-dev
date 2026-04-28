@@ -7,7 +7,7 @@ router = APIRouter(prefix="/projects")
 
 # initializing Jinja2 for HTMl return
 
-template = Jinja2Templates(directory="templates")
+template = Jinja2Templates(directory="app/templates")
 
 @router.get("/")
 def get_projects(request: Request):
