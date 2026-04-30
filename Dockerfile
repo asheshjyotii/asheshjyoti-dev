@@ -22,7 +22,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends curl \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /code/app/tailwindcss \
-    && curl -L "https://github.com/tailwindlabs/tailwindcss/releases/download/v4.2.4/tailwindcss-linux-x64" -o /code/app/tailwindcss/tailwindcss \
+    && curl -L "https://github.com/tailwindlabs/tailwindcss/releases/download/v4.2.4/tailwindcss-linux-arm64" -o /code/app/tailwindcss/tailwindcss \
     && chmod +x /code/app/tailwindcss/tailwindcss \
     && /code/app/tailwindcss/tailwindcss -i /code/app/static/css/input.css -o /code/app/static/css/output.css
 
