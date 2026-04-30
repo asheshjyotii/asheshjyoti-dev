@@ -3,9 +3,21 @@
 <head>
     {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', path='css/output.css') }}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sunshiney&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'JetBrains_Mono';
+        src: url("{{ url_for('static', path='fonts/JetBrains_Mono,Sunshiney/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') }}") format('truetype');
+        font-weight: 100 800;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Sunshiney';
+        src: url("{{ url_for('static', path='fonts/JetBrains_Mono,Sunshiney/Sunshiney/Sunshiney-Regular.ttf') }}") format('truetype');
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
     <title>{% block title %}{% endblock %} </title>
     <meta name="description" content="portfolio of asheshjyoti">
     
